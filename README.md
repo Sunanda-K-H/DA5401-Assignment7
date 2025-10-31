@@ -43,7 +43,7 @@ The study explores how model performance changes when evaluated across different
 | Ensemble | Random Forest, XGBoost |
 | Weak / Poor Model (for AUC < 0.5 requirement) | Bernoulli Naive Bayes |
 
-All models were trained **without hyperparameter tuning** as per assignment constraints.
+All models were trained **without hyperparameter tuning**.
 
 ---
 
@@ -58,7 +58,7 @@ All models were trained **without hyperparameter tuning** as per assignment cons
 ## Macro-Averaged ROC Curves
 
 Observations:
-- **KNN and SVC achieved the highest ROC-AUC (≈ 0.98)**
+- **KNN and SVC achieved the highest ROC-AUC**
 - Logistic Regression and Naive Bayes followed closely (0.94–0.97)
 - Dummy classifier sits around **0.50** = random guessing
 
@@ -68,10 +68,10 @@ Observations:
 
 Observations:
 - **PRC reveals clearer ranking differences than ROC**
-- KNN performs best with **AP ≈ 0.922**
-- SVC also strong (**AP ≈ 0.900**)
+- KNN performs best.
+- SVC also strong.
 - Decision Tree & Naive Bayes decline when recall increases
-- Dummy classifier extremely poor → AP ≈ 0.167
+- Dummy classifier extremely poor.
 
 ---
 
@@ -90,7 +90,7 @@ Observations:
 
 # Analysis & Insights
 
-- Rankings differ across metrics →  
+- Rankings differ across metrics:
   **ROC-AUC hides false positives**, leading weak models to appear strong.
 - **PRC-AP is more reliable in class-imbalance settings**.
 - Decision Tree performs inconsistently due to overfitting.
@@ -100,15 +100,8 @@ Observations:
 
 ## Additional Model Evaluation – Bernoulli Naive Bayes (AUC < 0.5)
 
-As required, we experimented with another model whose ROC-AUC score is poor compared to other classifiers.
-
-### Model Used:
-- **Bernoulli Naive Bayes**
-
-### Why Bernoulli NB?
 - It assumes binary features and strong independence between them.
-- Such assumptions are unrealistic for a **7-class ordinal food rating** dataset.
-- We expect poor performance → Good candidate for comparison.
+- Such assumptions are unrealistic for a **7-class** dataset.
 
 ---
 
@@ -124,7 +117,7 @@ This means the model performs **similar to random guessing**.
 
 ### Precision-Recall Curve and AP Score
 
-**Macro-Averaged AP = ~0.17**
+**Macro-Averaged AP = ~ 0.17**
 
 This shows very low precision when recall increases — meaning the model makes many incorrect predictions for minority classes.
 
