@@ -41,7 +41,7 @@ The study explores how model performance changes when evaluated across different
 | Distance-based | K-Nearest Neighbors (KNN) |
 | Margin-based | Support Vector Machine (SVC) |
 | Ensemble | Random Forest, XGBoost |
-| Weak / Poor Model (for AUC < 0.5 requirement) | Perceptron (label-shuffled version) |
+| Weak / Poor Model (for AUC < 0.5 requirement) | Bernoulli Naive Bayes |
 
 All models were trained **without hyperparameter tuning** as per assignment constraints.
 
